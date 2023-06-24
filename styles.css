@@ -13,15 +13,14 @@
   --light-slate-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
   --violet-blue: hsla(256, 72%, 46%, 1);
-  --persian-blue: hsla(241, 72%, 46%, 0);
+  --persian-blue: hsla(241, 72%, 46%);
 }
 
 * {
   padding: 0;
   margin: 0;
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 18px;
-  color: white;
+  box-sizing: border-box;
 }
 
 main {
@@ -29,6 +28,8 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 18px;
+  color: white;
 }
 
 .result-main {
@@ -93,6 +94,81 @@ main {
 .result-stats {
   height: 100%;
   width: 250px;
+  padding: 1.5rem;
+}
+
+.stats-heading {
+  color: var(--dark-grey-blue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stats-cards {
+  display: grid;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.stats-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 10;
+}
+
+.reaction-card {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: var(--light-red);
+}
+
+.memory-card {
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: var(--orangey-yellow);
+}
+
+.verbal-card {
+  color: var(--green-teal);
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.visual-card {
+  color: var(--persian-blue);
+  background-color: hsla(241, 72%, 46%, 0.1);
+}
+
+.stats-card-icon {
+  margin-right: 8px;
+}
+
+.stats-card-icon img {
+  display: block;
+}
+
+.stats-card-name {
+  color: inherit;
+  flex: 1;
+}
+
+.stats-card-score {
+  color: hsla(224, 30%, 27%, 0.5);
+  font-weight: 700;
+}
+
+.stats-card-score span {
+  color: var(--dark-grey-blue);
+}
+
+.continue-button {
+  width: 100%;
+  border-radius: 100vw;
+  background-color: var(--dark-grey-blue);
+  color: inherit;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 /* Mobile screen styles  */
